@@ -17,14 +17,14 @@ const Navbar = () => {
                     className="block w-96 pl-10 pr-4 py-2 outline-none shadow-sm focus:outline-none focus:border-none text-black "
                 />
             </div>
-            <div className="flex p-1 border-2 gap-2 rounded-full items-center justify-center cursor-pointer">
+            <div className="flex p-1 border-[1px] gap-2 rounded-full items-center justify-center cursor-pointer">
                 <MenuIcon size={20}></MenuIcon>
                 <Image
                     src="/images/logo.png" // Replace with the path to your logo image
                     alt="Your Logo"
                     width={35} // Adjust the width as needed
                     height={35} // Adjust the height as needed
-                    className="p-1 border-2 rounded-full"
+                    className="p-1 border-[1px] rounded-full"
                 />
             </div>
         </nav>
