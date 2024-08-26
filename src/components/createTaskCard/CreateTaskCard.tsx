@@ -49,8 +49,8 @@ const CreateTaskCard = () => {
                     </div>
                 </div>
             </CardHeader>
-            <hr className="mx-4" />
-            <CardDescription className="px-6 py-3">lorem</CardDescription>
+            <hr className="mx-4 mb-4" />
+            {/* <CardDescription className="px-6 py-3">lorem</CardDescription> */}
             <CardFooter className="flex justify-between items-center">
                 <div className="flex justify-start gap-2">
                     <div className="flex justify-center items-center border-[1px] border-gray-400 border-dashed rounded-full w-[40px] h-[40px]">
