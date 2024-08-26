@@ -20,25 +20,25 @@ const options = [
 ];
 
 const TaskCard = () => {
-    const [isOpen, setIsOpen] = React.useState<boolean>(false);
+    const [isOpenSideDrawer, setIsOpenSideDrawer] = React.useState<boolean>(false);
 
     const handleSelectChange = (value: string) => {
         console.log('Selected value:', value);
         // You can also update state or perform other actions here
     };
     const openSheet = (value: boolean) => {
-        setIsOpen(value);
+        setIsOpenSideDrawer(value);
         // You can also update state or perform other actions here
     };
 
     useEffect(() => {
-        setIsOpen(isOpen);
-    }, [isOpen]);
+        setIsOpenSideDrawer(isOpenSideDrawer);
+    }, [isOpenSideDrawer]);
 
     const [date, setDate] = React.useState<Date>();
     return (
         <Card className="w-full h-full mx-4 ">
-            <SideDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
+            <SideDrawer isOpenSideDrawer={isOpenSideDrawer} setIsOpenSideDrawer={setIsOpenSideDrawer} />
             <CardHeader
                 onClick={() => {
                     openSheet(true);

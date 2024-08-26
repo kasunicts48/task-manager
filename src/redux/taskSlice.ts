@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction, createSelector } from '@reduxjs/toolkit';
 
 import { randomUUID } from 'crypto';
 
@@ -64,6 +64,13 @@ const taskSlice = createSlice({
         },
     },
 });
+
+// Selector to get tasks by status
+export const getTasksByStatus = (status: Task['status']) =>
+    createSelector(
+        (state: TaskState) => state.tasks,
+        (tasks) => tasks.filter((task) => task.status === status)
+    );
 
 export const { createTask, updateTaskStatus, updateTaskDueDate, editTask, deleteTask } = taskSlice.actions;
 
